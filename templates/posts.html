@@ -1,33 +1,12 @@
-<div>
-    <ul>
-        {% if request.user.is_authenticated %}
-        <li>
-            <a href = "{% url 'logout' %}"> Logout </a>
-        </li>
-        {% else %}
-        <li>
-            <a href = "{% url 'login' %}"> Login </a>
-        </li>
-        
-        <li>
-            <a href = "{% url 'signup' %}"> Sign up </a>
-        </li>
-        {% endif %}
-    </ul>
-</div>
+{% extends "index.html" %}
 
-
-
+{% block content %}
 
 <div>
     <a href="{% url 'make_post' %}"> Make Post </a>
-
 </div>
 
-
-
 <div>
-
     {% for post in object_list  %}
         <p>{{post.title}}</p>
         <a href = "{% url 'post_detail' post.pk %}">
@@ -35,6 +14,6 @@
         
         </a>
     {% endfor %}
-
-
 </div>
+
+{% endblock %}

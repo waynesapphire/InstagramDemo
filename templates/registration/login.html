@@ -1,3 +1,5 @@
+{% extends 'nav.html' %}
+{% block content %}
 <h1> Login </h1>
 
 <form action = "" method="post" enctype="multipart/form-data">
@@ -5,3 +7,4 @@
     {{form.as_p}}
     <button  type = "submit"> Login  </button>
 </form>
+{% endblock content %}
