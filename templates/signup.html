@@ -1,10 +1,12 @@
-{% extends 'base.html' %}
-{% block content %}
-<h1> Sign up </h1>
+{% extends "base.html" %}
 
-<form method="post" >
+{% block content %}
+
+<h2>Sign up</h2>
+<form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form.as_p}}
-    <button  type = "submit"> Sign up  </button>
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
 </form>
+
 {% endblock content %}
